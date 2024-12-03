@@ -39,22 +39,20 @@ let arma2 = "";
 } */
 
 function determinarGanador(jugador1, jugador2) {
-  if ((jugador1 === "piedra" && jugador2 === "tijeras") ||
-        (jugador1 === "tijeras" && jugador2 === "papel") ||
-        (jugador1 === "papel" && jugador2 === "piedra") ||
-        (jugador1 === "piedra" && jugador2 === "lagarto") ||
-        (jugador1 === "lagarto" && jugador2 === "spock") ||
-        (jugador1 === "spock" && jugador2 === "tijeras") ||
-        (jugador1 === "tijeras" && jugador2 === "lagarto") ||
-        (jugador1 === "lagarto" && jugador2 === "papel") ||
-        (jugador1 === "papel" && jugador2 === "spock") ||
-        (jugador1 === "spock" && jugador2 === "piedra")) {
-    return 1;
-  } else if (jugador1 === jugador2) {
+  const reglas = {
+    piedra: ["tijeras", "lagarto"],
+    tijeras: ["papel", "lagarto"],
+    papel: ["piedra", "spock"],
+    lagarto: ["spock", "papel"],
+    spock: ["tijeras", "piedra"]
+  };
+  if (jugador1 === jugador2) {
     return 0;
-  } else {
-    return 2;
   }
+  if (reglas[jugador1]?.includes(jugador2)) {
+    return 1;
+  }
+  return 2;
 }
 
 function anunciarGanadore(codigo, nombre1, nombre2) {

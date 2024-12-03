@@ -5,27 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
 </head>
 
 <body>
-
-  <p id="jugador1-piedra" onClick="opcionEscogida('1', 'piedra', 'jugador1-piedra')"> 🪨</p>
-  <p id="jugador1-papel" onClick="opcionEscogida('1', 'papel', 'jugador1-papel')"> 📄</p>
-  <p id="jugador1-tijera" onClick="opcionEscogida('1', 'tijera', 'jugador1-tijera')"> ✂️</p>
-  <p id="jugador1-lagarto" onClick="opcionEscogida('1', 'lagarto', 'jugador1-lagarto')"> 🦎</p>
-  <p id="jugador1-spock" onClick="opcionEscogida('1', 'spock', 'jugador1-spock')"> 🖖🏼</p>
-
-  <span> 🌩️ VERSUS 🌩️ </span>
-
-
-  <p id="jugador2-piedra" onClick="opcionEscogida('2', 'piedra', 'jugador2-piedra')"> 🪨</p>
-  <p id="jugador2-papel" onClick="opcionEscogida('2', 'papel', 'jugador2-papel')"> 📄</p>
-  <p id="jugador2-tijera" onClick="opcionEscogida('2', 'tijera', 'jugador2-tijera')"> ✂️</p>
-  <p id="jugador2-lagarto" onClick="opcionEscogida('2', 'lagarto', 'jugador2-lagarto')"> 🦎</p>
-  <p id="jugador2-spock" onClick="opcionEscogida('2', 'spock', 'jugador2-spock')"> 🖖🏼</p>
-
-  <button onClick="jugar()">¿Quien gana?</button>
+  <span>JUGADOR 1</span>
+  <div>
+    <button id="jugador1-piedra" class="arma" onClick="opcionEscogida('1', 'piedra', 'jugador1-piedra')"> 🪨</button>
+    <button id="jugador1-papel" class="arma" onClick="opcionEscogida('1', 'papel', 'jugador1-papel')"> 📄</button>
+    <button id="jugador1-tijera" class="arma" onClick="opcionEscogida('1', 'tijera', 'jugador1-tijera')"> ✂️</button>
+    <button id="jugador1-lagarto" class="arma" onClick="opcionEscogida('1', 'lagarto', 'jugador1-lagarto')"> 🦎</button>
+    <button id="jugador1-spock" class="arma" onClick="opcionEscogida('1', 'spock', 'jugador1-spock')"> 🖖🏼</button>
+  </div>
+  <span class="versus"> 🌩️ VERSUS 🌩️ </span>
+  <span>JUGADOR 2</span>
+  <div>
+    <button id="jugador2-piedra" class="arma" onClick="opcionEscogida('2', 'piedra', 'jugador2-piedra')"> 🪨</button>
+    <button id="jugador2-papel" class="arma" onClick="opcionEscogida('2', 'papel', 'jugador2-papel')"> 📄</button>
+    <button id="jugador2-tijera" class="arma" onClick="opcionEscogida('2', 'tijera', 'jugador2-tijera')"> ✂️</button>
+    <button id="jugador2-lagarto" class="arma" onClick="opcionEscogida('2', 'lagarto', 'jugador2-lagarto')"> 🦎</button>
+    <button id="jugador2-spock" class="arma" onClick="opcionEscogida('2', 'spock', 'jugador2-spock')"> 🖖🏼</button>
+  </div>
+  <button onClick="jugar()" class="jugar">¿Quien gana?</button>
 
 </body>
 
