@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+
+  <p id="jugador1-piedra" onClick="opcionEscogida('1', 'piedra', 'jugador1-piedra')"> 🪨</p>
+  <p id="jugador1-papel" onClick="opcionEscogida('1', 'papel', 'jugador1-papel')"> 📄</p>
+  <p id="jugador1-tijera" onClick="opcionEscogida('1', 'tijera', 'jugador1-tijera')"> ✂️</p>
+
+  <span> VERSUS </span>
+
+
+  <p id="jugador2-piedra" onClick="opcionEscogida('2', 'piedra', 'jugador1-piedra')"> 🪨</p>
+  <p id="jugador2-papel" onClick="opcionEscogida('2', 'papel', 'jugador2-papel')"> 📄</p>
+  <p id="jugador2-tijera" onClick="opcionEscogida('2', 'tijera', 'jugador2-tijera')"> ✂️</p>
+
+  <button onClick="jugar()">¿Quien gana?</button>
+
+</body>
+
+</html>
