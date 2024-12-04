@@ -1,42 +1,11 @@
 const jugador1 = prompt("¿Cuál es tu increíble nombre, jugador1?");
 const jugador2 = prompt("¿Cuál es tu increíble nombre, jugador2?");
 
+document.getElementById("nombre-jugador1").innerText = `${jugador1}`;
+document.getElementById("nombre-jugador2").innerText = `${jugador2}`;
+
 let arma1 = "";
 let arma2 = "";
-
-/* unction obtenerOpcionJugador(jugador) {
-  let arma = prompt(`Hola ${jugador}. ¿Qué arma te gustaría usar? Escriba: piedra🪨, papel🧻, tijeras✂️, lagarto🦕 o spock🤖`);
-  let estabien = esOpcionValida(arma);
-
-  while (estabien === false) {
-    arma = prompt(`Perdona no te he entendido🤐 ${jugador}. ¿Qué arma te gustaría usar? Escriba: piedra🪨, papel🧻, tijeras✂️, lagarto🦕 o spock🤖`);
-    estabien = esOpcionValida(arma);
-  }
-
-  return arma;
-} */
-
-/* function esOpcionValida(arma) {
-  switch (arma.toLowerCase()) {
-  case "tijeras":
-    return true;
-
-  case "papel":
-    return true;
-
-  case "piedra":
-    return true;
-
-  case "lagarto":
-    return true;
-
-  case "spock":
-    return true;
-
-  default:
-    return false;
-  }
-} */
 
 function determinarGanador(jugador1, jugador2) {
   const reglas = {
@@ -54,7 +23,6 @@ function determinarGanador(jugador1, jugador2) {
   }
   return 2;
 }
-
 function anunciarGanadore(codigo, nombre1, nombre2) {
   switch (codigo) {
   case 0:
@@ -71,12 +39,13 @@ function anunciarGanadore(codigo, nombre1, nombre2) {
 const button = document.getElementById("button");
 
 function opcionEscogida(jugador, arma, identificador) {
-  alert(`El jugador ${jugador} escogio ${arma}`);
   const laOpcionPulsada = document.getElementById(identificador);
   laOpcionPulsada.classList.add("opcion-escogida");
   if (jugador === "1") {
+    alert(`El jugador ${jugador1} escogio ${arma}`);
     arma1 = arma;
   } else if (jugador === "2") {
+    alert(`El jugador ${jugador1} escogio ${arma}`);
     arma2 = arma;
   }
 }

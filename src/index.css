@@ -1,6 +1,5 @@
 body {
-  background: #f3bf72;
-
+  background:linear-gradient(#321a6c, #6136c6, #321a6c);
 }
 
 span{
@@ -16,9 +15,82 @@ span{
 }
 
 .jugar{
+  color:white;
+  background: black;
+  font-family: Roboto, serif;
+  letter-spacing: 2px;
   width: 620px;
   height: 60px;
-  margin: 20px 0 ;
+  margin: 40px 0 ;
   border-radius: 24px;
   font-size: 2rem;
+
+  &:hover{
+    background:white;
+    color:black;
+  }
+}
+
+h1 {
+  display:flex;
+  align-items: center;
+  font-size: 48px;
+  color: white;
+  text-shadow: 15px 15px 30px #070607; 
+}
+
+.versus {
+  font-family: Roboto, serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  padding:50px;
+  color:white;
+}
+
+.armas{
+  display:flex;
+  flex-direction: row;
+}
+
+.arma:hover{
+  background-color: rgb(71 123 243);
+}
+
+.jugador1{  
+  font-family: "Anton SC", serif;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  border:3px solid silver;
+  margin:30px 16px;
+  padding:40px;
+  border-radius: 10px;
+}
+
+.jugador2{
+  font-family: "Anton SC", serif;
+  letter-spacing: 2px;
+  display:flex;
+  flex-direction: column;
+  border:3px solid gold;
+  margin:16px;
+  padding:30px;
+  border-radius: 10px;
+}
+
+.game-container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  border:5px solid black;
+}
+
+.nombre-jugador2{
+  margin:auto;
+  padding: 20px;
+}
+
+.nombre-jugador1{
+  margin:auto;
+  padding: 20px;
 }
